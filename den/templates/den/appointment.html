@@ -1,0 +1,33 @@
+{% extends 'den/basic.html' %}
+{% load static %}
+{% block css %}
+.mta{
+  padding-left: 38%;
+}
+p{
+  border:1px black solid;
+  text-align: center;
+}
+h3,h2{
+  text-align: center;
+}
+{% endblock %}
+{% block body %}
+<div class="container mt-4">
+  <div class="section-heading">
+    <h2>Thanks for Mailing us. We received your Email. We will contact with you shortly.</h2>
+    <div class="container">
+      <h3><u>-:Check Your Filled Details:-</u></h3>
+      <br>
+      <p><strong>Name: </strong>{{yname}}</p>
+      <p><strong>Phone: </strong>{{yphone}}</p>
+      <p><strong>Email: </strong>{{yemail}}</p>
+      <p><strong>Address:</strong>{{yaddress}}</p>
+      <p><strong>Scheldule: </strong>{{yscheldule}}</p>
+      <p><strong>Date: </strong>{{ytime}}</p>
+      <p><strong>Message: </strong>{{ymessage}}</p>
+    </div>
+  </div>
+  <img class="mta" src="{% static 'den/smily.png' %}" alt="">
+</div>
+{% endblock %}
